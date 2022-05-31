@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#main{
+    width: 100%;
+}
+
+#header{
+    height: 48px;
+    background-color: #222;
+    cursor: pointer;
+    position: fixed;
+    /*sua header bam dinh phia tren*/
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    
+}
+
+#nav{
+    display: inline-block;
+}
+
+#nav, .more{
+list-style-type: none;
+}
+#nav > li{
+    display: inline-block;
+}
+#nav li{
+    position: relative;
+}
+
+#nav >li >a{
+    color: white;
+    text-transform: uppercase;
+}
+
+#nav li a{
+    text-decoration: none;
+    line-height: 48px;
+    padding: 0 24px;
+    display: block;
+}
+
+/*ghi đè để xuất hiện khi trỏ chuột vào*/
+#nav li:hover .more{
+    display: block;
+}
+
+/*nhap vao doi mau*/
+#nav .more li:hover a, /*gop css*/
+#nav > li:hover > a{
+    color: black;
+    background-color: #ccc;
+}
+
+#nav .more{
+    display: none;
+    min-width: 160px;
+    top: 100%;
+    left: 0px;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+}
+
+#nav .more a{
+color: black;
+line-height: 38px;
+padding: 0 16px;
+}
+
+
+#header .cart-btn{
+    float: right;
+    padding: 0 21px;
+    
+}
+#header .cart-btn:hover{
+    background-color: red;
+}
+#header .cart-btn a{
+    text-decoration: none;
+}
+
+#header .cart-icon{
+    color: white;
+    line-height: 48px;
+    font-size: 20px;
+    
+}
+
+#list_buy_container{
+    margin-top: 100px;
+    justify-content: center;
+}
+
+#list_buy{
+    display: flex;
+    width: 70%;
+    height: 110px;
+    margin: auto;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    background-color: aliceblue;
+}
+
+.list_buy_img{
+    width: 20%;
+    height: 108px;
+}
+.list_buy_img img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.list_buy_info{
+    width: 80%;
+    height: 100px; 
+}
+
+.list_buy_info > h3,
+.list_buy_info > p,
+.list_buy_info > .number{
+    margin-bottom: 10px;
+    
+}
+
+.list_buy_info input{
+    width: 50px;
+    text-align: center;
+}
+
+.number{
+    display: flex;
+}
+
+#price{
+    width: 70%;
+    height: 20px;
+    margin: auto;
+    color: red;
+    display: flex;
+}
+ #price .pay{
+     color: white;
+     background-color: red;
+     margin-left: 10px;
+     width: 150px;
+     height: 40px;
+ }
+
+ .pay a{
+     line-height: 40px;
+     text-align: center;
+     text-transform: uppercase;
+     text-decoration: none;
+     color: white;
+     padding: 0 22px;
+ }
+ 

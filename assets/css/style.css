@@ -1,0 +1,486 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+#main{
+
+}
+
+#header{
+    height: 48px;
+    background-color: #222;
+    cursor: pointer;
+    position: fixed;
+    /*sua header bam dinh phia tren*/
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#nav{
+    display: inline-block;
+}
+
+#nav, .more{
+list-style-type: none;
+}
+#nav > li{
+    display: inline-block;
+}
+#nav li{
+    position: relative;
+}
+
+#nav >li >a{
+    color: white;
+    text-transform: uppercase;
+}
+
+#nav li a{
+    text-decoration: none;
+    line-height: 48px;
+    padding: 0 24px;
+    display: block;
+}
+
+/*ghi đè để xuất hiện khi trỏ chuột vào*/
+#nav li:hover .more{
+    display: block;
+}
+
+/*nhap vao doi mau*/
+#nav .more li:hover a, /*gop css*/
+#nav > li:hover > a{
+    color: black;
+    background-color: #ccc;
+}
+
+#nav .more{
+    display: none;
+    min-width: 160px;
+    top: 100%;
+    left: 0px;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+}
+
+#nav .more a{
+color: black;
+line-height: 38px;
+padding: 0 16px;
+}
+
+#header .icon{
+}
+#header .cart-btn{
+    float: right;
+    padding: 0 21px;
+    
+}
+#header .cart-btn:hover{
+    background-color: red;
+}
+#header .cart-btn a{
+    text-decoration: none;
+}
+
+#header .cart-icon{
+    color: white;
+    line-height: 48px;
+    font-size: 20px;
+    
+}
+
+
+#slider{
+
+
+}
+
+#slider .content{
+
+}
+#slider .text-head{
+
+}
+#slider .text-dicription{
+
+}
+
+
+#items{
+    display: grid;
+    grid-template-areas:
+    "left center right";
+    height: 700px;
+    margin: auto;
+    width: 80%;
+    grid-template-columns: 6fr 6fr 6fr ;
+    grid-template-rows: 650px;
+    grid-gap: 50px;
+    color: black;
+    margin-top:50px;
+}
+#items .left{
+    grid-area: left;
+    background-color: #222;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    background: url('../img/ESSENTIAL-BOMBER-JACKET-BLACK-2.jpg') top center/ cover no-repeat;
+}
+
+#items .left strong{
+    color: #222;
+    display: inline;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 54.65px;
+    margin-left: 10%;
+}
+#items .center{
+    grid-area: center;
+    background-color: #222;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    background: url('../img/STORY-OF-HEAVEN-SLIM\ PANT-2.jpg') top center/ cover no-repeat;
+}
+#items .center strong{
+    color: #222;
+    display: inline;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 54.65px;
+    margin-left: 10%;
+    
+}
+#items .right{
+    grid-area: right;
+    background-color: #222;
+    border-radius: 5px;
+    background: url('../img/accessories-430x645.jpg')top center/ cover no-repeat;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+#items .right strong{
+    color: #222;
+    display: inline;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 54.65px;
+    margin-left: 10%;    
+}
+
+#member{
+    background:url('../img/BLANK-COVER\ \(1\).jpg') top center/ cover no-repeat;
+}
+#about{
+    height: 70vh;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#member > h1{
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    line-height: 150px;
+    font-weight: 600;
+    color: rgb(25, 115, 95)
+}
+.card{
+    width: 300px;
+    height: 700px;
+    border-radius: 10px;
+    text-align: center;
+    /*background-color:none;*/
+    overflow: hidden;
+    margin: 0 30px;
+     
+}
+.card__img {
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    transition: 0.25s;
+    margin: 0 auto;
+    transform: translateY(25px);
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+  }
+  
+.card__img:hover {
+    width: 100%;
+    height: 100%;
+    border-radius: unset;
+    border: unset;
+    transform: unset;
+  }
+  
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+.card h2 {
+    color: black;
+    margin-top: 40px;
+  }
+  
+.card p {
+    color: black
+  }
+
+#form{
+    display: none;
+    width: 60px;
+    height: 100px;
+    background-color: white;
+}
+/* footer */
+#footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #111;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+#footer .container .noi-dung{
+    margin-right: 30px;
+}
+#footer  .container .noi-dung.about{
+    width:40%;
+}
+#footer .container .noi-dung.about h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+    content: '';
+}
+#footer .container .noi-dung.about h2:before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #f00;
+}
+#footer .container .noi-dung.about p{
+    color: #999;
+}
+/*Thiết Lập Cho Thành Phần Icon Mạng Xã Hội*/
+.social-icon{
+    margin-top: 20px;
+    display: flex;
+}
+.social-icon li {
+    list-style: none;
+}
+.social-icon li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.social-icon li a:hover{
+    background: #f00;
+}
+.social-icon li a .fa{
+    color: #fff;
+    font-size: 20px;
+}
+.links h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.links h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.links h2::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #f00;
+}
+.links{
+   position: relative;
+   width: 25%;
+}
+.links ul li{
+    list-style: none;
+}
+.links ul li a{
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.links ul li a:hover{
+    color: #fff;
+}
+
+.contact h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.contact h2::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #f00;
+}
+.contact{
+    width: calc(35% - 60px);
+    margin-right: 0 !important;
+}
+.contact .info{
+    position: relative;
+}
+.contact .info li{
+    display: flex;
+    margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1) {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.contact .info li span{
+    color: #999;
+}
+.contact .info li a{
+    color: #999;
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin-top:16px;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+}
+.btn--primary {
+    background: #222;
+    color: #fff;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+    border-radius: 2px;
+    padding: 8px 24px;
+}
+.btn--primary:hover {
+    background: #f00;
+}
+.btn--primary:active {
+    background: #f00;
+    box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
+}
+.form__field {
+    width: 90%;
+    background: #fff;
+    color: #a3a3a3;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+    border: 0;
+    outline: 0;
+    padding: 8px 4px;
+}
+
+@media  (max-width: 768px){
+    #nav li a{
+        padding: 0 14px;
+    }
+    #footer{
+        padding: 40px;
+             }
+    #footer .container{
+        flex-direction: column;
+    }
+    #footer .container .noi-dung{
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+    #footer .container, .noi-dung.about, .links, .contact{
+        width: 100%;
+    }
+
+    #items .left h2 strong,
+    #items .center h2 strong,
+    #items .right h2 strong{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    #items{
+        height: 550px;
+        width: 90%;
+        grid-template-rows: 500px;
+        margin-top: 50px;
+    }
+
+    #member{
+        height: 700px;
+        display: block;
+        margin: auto;
+    }
+    #member h1{
+        width: 100%;
+    }
+    #about .card{
+        margin:0 10px;
+        width: 100%;
+        height: 400px;
+        
+    }
+    .card__img {
+        width: 120px;
+        height: 120px;
+    }
+
+}
